@@ -182,7 +182,8 @@
       font-size: .72rem;
       font-weight: 750;
     }
-    .download {
+    .actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .card-action {
       min-height: 49px;
       display: flex;
       align-items: center;
@@ -190,13 +191,13 @@
       gap: 10px;
       text-decoration: none;
       color: #fff;
-      background: linear-gradient(135deg, var(--navy-2), var(--blue));
       border-radius: 13px;
       font-weight: 850;
-      box-shadow: 0 10px 22px rgba(22, 105, 167, .23);
     }
-    .download:hover { filter: brightness(1.06); }
-    .download svg { width: 20px; }
+    .run { background: linear-gradient(135deg, #126b4a, #14966a); box-shadow: 0 10px 22px rgba(20, 122, 82, .22); }
+    .download { background: linear-gradient(135deg, var(--navy-2), var(--blue)); box-shadow: 0 10px 22px rgba(22, 105, 167, .23); }
+    .card-action:hover { filter: brightness(1.06); }
+    .card-action svg { width: 20px; }
     .file-note { margin-top: 11px; text-align: center; color: #768699; font-size: .76rem; }
 
     .how-to {
@@ -233,6 +234,7 @@
       .brand-subtitle, .top-link { display: none; }
       .hero { padding: 48px 0 36px; }
       .card { border-radius: 20px; }
+      .actions { grid-template-columns: 1fr; }
       .how-to { grid-template-columns: 1fr; }
     }
   </style>
@@ -289,11 +291,17 @@
               <span class="feature">Offline HTML</span>
               <span class="feature">OSCE report</span>
             </div>
-            <a class="download" href="https://github.com/zaljohar/simulator-bank/releases/download/sameer-adnan-v1.0/sameer-adnan-osce-seizure-history-simulator.zip" aria-label="Download Sameer Adnan Seizure History OSCE simulator">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 3v12"></path><path d="m7 10 5 5 5-5"></path><path d="M5 21h14"></path></svg>
-              Download simulator
-            </a>
-            <div class="file-note">ZIP package · 16.7 MB · Version 1.0</div>
+            <div class="actions">
+              <a class="card-action run" href="sameer_adnan_osce_seizure_history_simulator_final.html" target="_blank" rel="noopener" aria-label="Run Sameer Adnan Seizure History OSCE simulator online">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="m8 5 11 7-11 7Z"></path></svg>
+                Run online
+              </a>
+              <a class="card-action download" href="https://github.com/zaljohar/simulator-bank/releases/download/sameer-adnan-v1.0/sameer-adnan-osce-seizure-history-simulator.zip" aria-label="Download Sameer Adnan Seizure History OSCE simulator">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 3v12"></path><path d="m7 10 5 5 5-5"></path><path d="M5 21h14"></path></svg>
+                Download
+              </a>
+            </div>
+            <div class="file-note">Run in browser or download ZIP · Version 1.0</div>
           </div>
         </article>
       </div>
