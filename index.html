@@ -226,6 +226,44 @@
     }
     .how-to h2 { margin: 0 0 8px; color: var(--navy); font-size: 1.08rem; }
     .steps { margin: 0; padding-left: 19px; color: var(--muted); line-height: 1.7; font-size: .9rem; }
+
+    .creator-note {
+      margin-top: 28px;
+      padding: 28px;
+      color: var(--navy-2);
+      background: linear-gradient(135deg, #eef7fc, #f7fbfd);
+      border: 1px solid #cfe3ee;
+      border-left: 5px solid var(--blue);
+      border-radius: 20px;
+      box-shadow: 0 14px 35px rgba(13, 49, 84, .08);
+    }
+    .creator-note h2 { margin: 0 0 12px; color: var(--navy); font-size: 1.18rem; }
+    .creator-note p { margin: 0 0 12px; line-height: 1.75; }
+    .creator-note .sign-off { margin: 18px 0 0; font-weight: 800; }
+
+    .important-notes {
+      margin-top: 20px;
+      padding: 24px 28px;
+      display: grid;
+      gap: 18px;
+      color: #334f66;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+    }
+    .important-note { display: grid; grid-template-columns: auto 1fr; gap: 14px; align-items: start; }
+    .note-icon {
+      width: 36px;
+      height: 36px;
+      display: grid;
+      place-items: center;
+      color: var(--navy);
+      background: #eaf3f8;
+      border-radius: 10px;
+      font-weight: 900;
+    }
+    .important-note h3 { margin: 0 0 5px; color: var(--navy); font-size: .98rem; }
+    .important-note p { margin: 0; line-height: 1.65; font-size: .9rem; }
     .empty { display: none; padding: 32px; color: var(--muted); text-align: center; background: #fff; border-radius: 18px; border: 1px solid var(--line); }
 
     footer { padding: 27px 0 36px; color: #718397; border-top: 1px solid #dce5ee; font-size: .82rem; }
@@ -316,6 +354,30 @@
             <li>Allow microphone access when the simulator requests it.</li>
             <li>Conduct the encounter in Arabic using an Iraqi accent.</li>
           </ol>
+        </div>
+      </aside>
+
+      <aside class="creator-note" aria-label="Message from the creator">
+        <h2>Hello,</h2>
+        <p>These simulators were created by Dr. Zuhair Abdul-Ghafoor Al-Johar, Consultant Neurologist and Assistant Professor at the College of Medicine, University of Baghdad.</p>
+        <p>They aim to help students improve their clinical skills in history-taking and conducting physical examinations. Students may train with the simulators as many times as they wish.</p>
+        <p class="sign-off">Best wishes,<br>Dr. Zuhair Abdul-Ghafoor Al-Johar</p>
+      </aside>
+
+      <aside class="important-notes" aria-label="Important information">
+        <div class="important-note">
+          <div class="note-icon" aria-hidden="true">i</div>
+          <div>
+            <h3>Educational disclaimer</h3>
+            <p>These simulators are intended for clinical education and practice. They do not replace supervised clinical training, professional medical judgment, or the assessment of real patients.</p>
+          </div>
+        </div>
+        <div class="important-note">
+          <div class="note-icon" aria-hidden="true">✓</div>
+          <div>
+            <h3>Technical guidance</h3>
+            <p>Voice interaction requires microphone access. For best results, use an updated version of Google Chrome or Microsoft Edge in a quiet environment.</p>
+          </div>
         </div>
       </aside>
     </section>
