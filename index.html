@@ -4,6 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Run interactive clinical examination and history-taking simulators online.">
+  <meta name="author" content="Dr. Zuhair Abdul-Ghafoor Al-Johar">
+  <meta name="copyright" content="© 2026 Dr. Zuhair Abdul-Ghafoor Al-Johar. All rights reserved.">
   <meta name="theme-color" content="#0b315f">
   <title>Simulator Bank</title>
   <style>
@@ -73,7 +75,6 @@
       border-radius: 999px;
       border: 1px solid rgba(255,255,255,.22);
     }
-
     .hero { padding: 66px 0 46px; }
     .eyebrow {
       margin: 0 0 12px;
@@ -328,8 +329,30 @@
     .important-note p { margin: 0; line-height: 1.65; font-size: .9rem; }
     .empty { display: none; padding: 32px; color: var(--muted); text-align: center; background: #fff; border-radius: 18px; border: 1px solid var(--line); }
 
-    footer { padding: 27px 0 36px; color: #718397; border-top: 1px solid #dce5ee; font-size: .82rem; }
-    .footer-row { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+    .site-footer {
+      margin-top: 12px;
+      padding: 22px 0;
+      color: var(--muted);
+      background: #f5f8fb;
+      border-top: 1px solid var(--line);
+    }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 24px;
+    }
+    .footer-left,
+    .footer-use {
+      color: inherit;
+      font-size: .82rem;
+      line-height: 1.55;
+    }
+    .footer-brand { font-weight: 700; }
+    .footer-copyright {
+      margin-top: 2px;
+      color: inherit;
+    }
 
     @media (max-width: 640px) {
       .shell { width: min(100% - 24px, 1180px); }
@@ -342,6 +365,7 @@
       .card-body { padding-top: 10px; }
       .actions { grid-template-columns: 1fr; }
       .how-to { grid-template-columns: 1fr; }
+      .footer-inner { gap: 16px; }
     }
   </style>
 </head>
@@ -583,10 +607,13 @@
     </section>
   </main>
 
-  <footer>
-    <div class="shell footer-row">
-      <span>Simulator Bank · Interactive clinical education</span>
-      <span>Educational simulation only</span>
+  <footer class="site-footer" role="contentinfo">
+    <div class="shell footer-inner">
+      <div class="footer-left">
+        <div class="footer-brand">Simulator Bank · Interactive clinical education</div>
+        <div class="footer-copyright">© 2026 Dr. Zuhair Abdul-Ghafoor Al-Johar. All rights reserved.</div>
+      </div>
+      <div class="footer-use">Educational use only</div>
     </div>
   </footer>
 
