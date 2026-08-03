@@ -1,6 +1,17 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <!-- Google Analytics: anonymous site usage and simulator-opening events. -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RENZ57Y440"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-RENZ57Y440', {
+      allow_google_signals: false,
+      allow_ad_personalization_signals: false
+    });
+  </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Run interactive clinical examination and history-taking simulators online.">
@@ -666,6 +677,22 @@
     }
 
     searchInput.addEventListener('input', filterCards);
+
+    document.addEventListener('click', event => {
+      const link = event.target.closest('.card-image, .card-action.run');
+      if (!link) return;
+      const card = link.closest('.card');
+      const simulatorName = card?.querySelector('h3')?.textContent.trim() || 'Unknown simulator';
+      const simulatorFile = decodeURIComponent(new URL(link.href, location.href).pathname.split('/').pop() || '');
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', 'simulator_open', {
+          simulator_name: simulatorName,
+          simulator_file: simulatorFile,
+          link_location: link.classList.contains('card-image') ? 'patient_image' : 'run_button',
+          transport_type: 'beacon'
+        });
+      }
+    });
   </script>
 </body>
 </html>
